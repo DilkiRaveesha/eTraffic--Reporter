@@ -142,7 +142,7 @@ public class AdminHomePage extends javax.swing.JFrame {
         );
 
         jLabel3.setBackground(new java.awt.Color(204, 255, 51));
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/image/e traffic1.jpg"))); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/etrafficreporter/1.jpg"))); // NOI18N
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
