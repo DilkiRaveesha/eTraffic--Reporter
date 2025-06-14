@@ -1,0 +1,88 @@
+<!-- Created with Jaspersoft Studio version 7.0.3.final using JasperReports Library version 7.0.3-41034ca841d452f3305ba55b9042260aaa1ab5dd  -->
+<jasperReport name="Reports" language="java" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="75eaaa8a-2fce-4939-8ce0-48f81128a129">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="a21hbGl0aDJfdHJhZmZpY3JlcG9ydGVyLnJlcG9ydHMgQVMgLDQxLDE5LDQ1ZTAzNzdhLTY3MTMt&#xa;NGQ2Ni1iZDM5LWQ2ZDFiZjg4NzNmYzs="/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<query language="SQL"><![CDATA[SELECT id,
+	name,
+	nic,
+	vehicle_number,
+	violation_type,
+	date_time,
+	location,
+	description
+FROM kmalith2_trafficreporter.reports]]></query>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+	</field>
+	<field name="nic" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nic"/>
+		<property name="com.jaspersoft.studio.field.label" value="nic"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+	</field>
+	<field name="vehicle_number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="vehicle_number"/>
+		<property name="com.jaspersoft.studio.field.label" value="vehicle_number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+	</field>
+	<field name="violation_type" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="violation_type"/>
+		<property name="com.jaspersoft.studio.field.label" value="violation_type"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+	</field>
+	<field name="date_time" class="java.time.LocalDateTime">
+		<property name="com.jaspersoft.studio.field.name" value="date_time"/>
+		<property name="com.jaspersoft.studio.field.label" value="date_time"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+	</field>
+	<field name="location" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="location"/>
+		<property name="com.jaspersoft.studio.field.label" value="location"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+	</field>
+	<field name="description" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="description"/>
+		<property name="com.jaspersoft.studio.field.label" value="description"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
+	</field>
+	<group name="id">
+		<expression><![CDATA[$F{id}]]></expression>
+	</group>
+	<group name="name">
+		<expression><![CDATA[$F{name}]]></expression>
+	</group>
+	<group name="nic">
+		<expression><![CDATA[$F{nic}]]></expression>
+	</group>
+	<group name="vehicle_number">
+		<expression><![CDATA[$F{vehicle_number}]]></expression>
+	</group>
+	<group name="violation_type">
+		<expression><![CDATA[$F{violation_type}]]></expression>
+	</group>
+	<group name="date_time">
+		<expression><![CDATA[$F{date_time}]]></expression>
+	</group>
+	<group name="location">
+		<expression><![CDATA[$F{location}]]></expression>
+	</group>
+	<group name="description">
+		<expression><![CDATA[$F{description}]]></expression>
+	</group>
+	<background splitType="Stretch"/>
+	<title height="79" splitType="Stretch"/>
+	<pageHeader height="35" splitType="Stretch"/>
+	<columnHeader height="61" splitType="Stretch"/>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

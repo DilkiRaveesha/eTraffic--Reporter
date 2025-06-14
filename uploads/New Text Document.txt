@@ -1,0 +1,23 @@
+if (result == JFileChooser.APPROVE_OPTION) {
+        File sourceFile = chooser.getSelectedFile();
+
+        // Create destination folder (if it doesn't exist)
+        File destinationDir = new File("uploads");
+        if (!destinationDir.exists()) {
+            destinationDir.mkdirs(); // Create folder
+        }
+
+        // Build destination file path
+        File destinationFile = new File(destinationDir, sourceFile.getName());
+
+        try {
+            // Copy file
+            Files.copy(sourceFile.toPath(), destinationFile.toPath(), StandardCopyOption.REPLACE_EXISTING);
+            System.out.println("File uploaded to: " + destinationFile.getAbsolutePath());
+            jTextField1.setText(destinationFile.getAbsolutePath()); // Optional: show file path in UI
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(this, "Failed to upload file.", "Error", JOptionPane.ERROR_MESSAGE);
+        }
+    }
