@@ -24,9 +24,9 @@
 		<property name="com.jaspersoft.studio.field.label" value="vehicle_number"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
 	</field>
-	<field name="violation_type" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="violation_type"/>
-		<property name="com.jaspersoft.studio.field.label" value="violation_type"/>
+	<field name="fine_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fine_name"/>
+		<property name="com.jaspersoft.studio.field.label" value="fine_name"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="reports"/>
 	</field>
 	<field name="date_time" class="java.time.LocalDateTime">
@@ -56,8 +56,8 @@
 	<group name="vehicle_number">
 		<expression><![CDATA[$F{vehicle_number}]]></expression>
 	</group>
-	<group name="violation_type">
-		<expression><![CDATA[$F{violation_type}]]></expression>
+	<group name="fine_name">
+		<expression><![CDATA[$F{fine_name}]]></expression>
 	</group>
 	<group name="date_time">
 		<expression><![CDATA[$F{date_time}]]></expression>
@@ -73,31 +73,27 @@
 		<element kind="staticText" uuid="5bae534c-938c-455b-b2b3-f587c147fc20" x="20" y="47" width="340" height="80" fontName="Calibri" fontSize="28.0" bold="true" hTextAlign="Right">
 			<text><![CDATA[Your Fine Report :]]></text>
 		</element>
-		<element kind="staticText" uuid="bc8f594b-17c2-49eb-bf88-1015aee7d118" x="165" y="100" width="50" height="30">
-			<text><![CDATA[id]]></text>
+		<element kind="staticText" uuid="bc8f594b-17c2-49eb-bf88-1015aee7d118" x="183" y="100" width="165" height="30" fontSize="20.0" hTextAlign="Right">
+			<text><![CDATA[Report Number:]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a00cd2b6-467b-4c54-b7a9-fb66a624ce88"/>
 		</element>
-		<element kind="staticText" uuid="16dff98c-b096-4412-bbec-00abef31b9c8" x="165" y="140" width="100" height="30">
-			<text><![CDATA[name]]></text>
-			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60b48c09-c268-4116-9ca7-02adcc68bb65"/>
-		</element>
-		<element kind="staticText" uuid="3dc14564-6d13-461a-baf8-ff1a4a274b42" x="195" y="320" width="70" height="30" hTextAlign="Right">
-			<text><![CDATA[fine_valueLKR]]></text>
+		<element kind="staticText" uuid="3dc14564-6d13-461a-baf8-ff1a4a274b42" x="180" y="257" width="170" height="30" fontSize="20.0" hTextAlign="Right">
+			<text><![CDATA[Fine Value (LKR):]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a28dd64-d563-43b7-9957-1188bb25f242"/>
 		</element>
-		<element kind="staticText" uuid="f83cb38b-f873-4ce6-9193-e8d2e56bca91" x="165" y="182" width="100" height="30">
-			<text><![CDATA[violation_type]]></text>
+		<element kind="staticText" uuid="f83cb38b-f873-4ce6-9193-e8d2e56bca91" x="183" y="138" width="165" height="30" fontSize="20.0" hTextAlign="Right">
+			<text><![CDATA[Violation name:]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="340c2481-e0af-4b07-aeeb-fe029f7a5821"/>
 		</element>
-		<element kind="staticText" uuid="28efc082-dcae-4d15-b789-e7d804029990" x="165" y="220" width="100" height="30">
-			<text><![CDATA[date_time]]></text>
+		<element kind="staticText" uuid="28efc082-dcae-4d15-b789-e7d804029990" x="205" y="176" width="145" height="30" fontSize="20.0" hTextAlign="Right">
+			<text><![CDATA[Date and Time:]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5ccff927-cf2c-4b22-a55f-72fe72372fc6"/>
 		</element>
-		<element kind="staticText" uuid="9bfc4b4f-c960-4738-9e05-f2ff36a05b24" x="165" y="270" width="100" height="30">
-			<text><![CDATA[location]]></text>
+		<element kind="staticText" uuid="9bfc4b4f-c960-4738-9e05-f2ff36a05b24" x="250" y="216" width="100" height="30" fontSize="20.0" hTextAlign="Right">
+			<text><![CDATA[Location:]]></text>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="13de769c-e52c-4504-bb72-a534bcf0737b"/>
 		</element>
-		<element kind="textField" uuid="6abc7d29-145b-41bf-9064-bd5ee03a650e" x="380" y="97" width="50" height="30">
+		<element kind="textField" uuid="6abc7d29-145b-41bf-9064-bd5ee03a650e" x="380" y="97" width="260" height="30" fontSize="20.0">
 			<expression><![CDATA[$F{id}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a00cd2b6-467b-4c54-b7a9-fb66a624ce88"/>
 		</element>
@@ -105,23 +101,19 @@
 			<expression><![CDATA[$F{vehicle_number}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="448ead32-ce08-4610-be99-a68e7ab7bee8"/>
 		</element>
-		<element kind="textField" uuid="7f948474-04d5-40ff-839a-b1e4e791def8" x="380" y="180" width="100" height="30">
-			<expression><![CDATA[$F{violation_type}]]></expression>
+		<element kind="textField" uuid="7f948474-04d5-40ff-839a-b1e4e791def8" x="380" y="136" width="260" height="30" fontSize="20.0">
+			<expression><![CDATA[$F{fine_name}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="340c2481-e0af-4b07-aeeb-fe029f7a5821"/>
 		</element>
-		<element kind="textField" uuid="fe2da892-777b-4ceb-a4c4-6d8661ca1638" x="380" y="220" width="100" height="30">
+		<element kind="textField" uuid="fe2da892-777b-4ceb-a4c4-6d8661ca1638" x="380" y="176" width="260" height="30" fontSize="20.0">
 			<expression><![CDATA[$F{date_time}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5ccff927-cf2c-4b22-a55f-72fe72372fc6"/>
 		</element>
-		<element kind="textField" uuid="2a48c2d5-2d5e-478d-834b-b17a273c61a8" x="380" y="270" width="100" height="30">
+		<element kind="textField" uuid="2a48c2d5-2d5e-478d-834b-b17a273c61a8" x="380" y="216" width="260" height="30" fontSize="20.0">
 			<expression><![CDATA[$F{location}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="13de769c-e52c-4504-bb72-a534bcf0737b"/>
 		</element>
-		<element kind="textField" uuid="b221a1e8-88c0-45ac-85d8-12934da28c68" x="380" y="140" width="100" height="30">
-			<expression><![CDATA[$F{name}]]></expression>
-			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="60b48c09-c268-4116-9ca7-02adcc68bb65"/>
-		</element>
-		<element kind="textField" uuid="9f6a4aee-9f2a-49f6-9125-2c28a06e6e7f" x="380" y="320" width="70" height="30">
+		<element kind="textField" uuid="9f6a4aee-9f2a-49f6-9125-2c28a06e6e7f" x="380" y="257" width="260" height="30" fontSize="20.0">
 			<expression><![CDATA[$F{fine_valueLKR}]]></expression>
 			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7a28dd64-d563-43b7-9957-1188bb25f242"/>
 		</element>
